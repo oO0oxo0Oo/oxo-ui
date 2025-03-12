@@ -97,7 +97,7 @@ watch(
   () => props.modelValue,
   (newVal) => {
     innerValue.value = newVal;
-    // 表单校验出发
+    // 表单校验触发
     formItem?.validate("change").catch((err) => debugWarn(err));
   }
 );
