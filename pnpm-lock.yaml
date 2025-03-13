@@ -205,10 +205,6 @@ importers:
       vue:
         specifier: ^3.4.19
         version: 3.5.13(typescript@5.8.2)
-    devDependencies:
-      vite-plugin-dts:
-        specifier: ^4.5.0
-        version: 4.5.3(@types/node@20.17.24)(rollup@4.35.0)(typescript@5.8.2)(vite@5.4.14(@types/node@20.17.24)(sass@1.85.1)(terser@5.39.0))
 
   packages/locale: {}
 
