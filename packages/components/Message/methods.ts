@@ -10,7 +10,7 @@ import type {
   MessageType,
 } from "./types";
 import { messageTypes } from "./types";
-import { useId, useZIndex } from "@toy-element/hooks";
+import { useId, useZIndex } from "@oxo-ui/hooks";
 import { isString, findIndex, set, each, get } from "lodash-es";
 import MessageConstructor from "./Message.vue";
 

@@ -15,7 +15,7 @@ describe('error', () => {
     expect(warn.mock.calls).toMatchInlineSnapshot(`
       [
         [
-          [ErUIError: [scope]:msg],
+          [OxUIError: [scope]:msg],
         ],
         [
           [SyntaxError: custom error],

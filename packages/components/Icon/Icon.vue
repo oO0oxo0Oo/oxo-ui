@@ -12,7 +12,7 @@ import { computed } from "vue"; // 导入computed函数，用于创建计算属�
 
 // 定义组件选项，设置组件名称和继承Attrs选项
 defineOptions({
-  name: "ErIcon",
+  name: "OxIcon",
   inheritAttrs: false
 })
 
@@ -29,7 +29,7 @@ const customStyles = computed(() => ({ color: props.color ?? void 0 }));
 
 <template>
   <!-- 定义模板，渲染图标。通过class和style属性应用图标样式，通过v-bind传递额外的属性给图标 -->
-  <i class="er-icon" :class="{ [`er-icon--${type}`]: type }" :style="customStyles" v-bind="$attrs">
+  <i class="ox-icon" :class="{ [`ox-icon--${type}`]: type }" :style="customStyles" v-bind="$attrs">
     <font-awesome-icon v-bind="filterProps" />
   </i>
 </template>

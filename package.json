@@ -1,21 +1,21 @@
 {
-  "name": "@toy-element/worksapce",
+  "name": "@oxo-ui/worksapce",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "pnpm --filter @toy-element/play dev",
-    "story": "pnpm --filter @toy-element/play storybook",
-    "docs:dev": "pnpm --filter @toy-element/docs dev",
-    "docs:build": "pnpm --filter @toy-element/docs build",
+    "dev": "pnpm --filter @oxo-ui/play dev",
+    "story": "pnpm --filter @oxo-ui/play storybook",
+    "docs:dev": "pnpm --filter @oxo-ui/docs dev",
+    "docs:build": "pnpm --filter @oxo-ui/docs build",
     "test": "run-s test-utils test-comp",
-    "test-comp": "cross-env NODE_ENV=test pnpm --filter @toy-element/components test",
-    "test-utils": "cross-env NODE_ENV=test pnpm --filter @toy-element/utils test",
-    "test-hooks": "cross-env NODE_ENV=test pnpm --filter @toy-element/hooks test",
+    "test-comp": "cross-env NODE_ENV=test pnpm --filter @oxo-ui/components test",
+    "test-utils": "cross-env NODE_ENV=test pnpm --filter @oxo-ui/utils test",
+    "test-hooks": "cross-env NODE_ENV=test pnpm --filter @oxo-ui/hooks test",
     "build": "run-s build-hooks build-comp",
-    "build-comp": "cross-env NODE_ENV=production pnpm --filter toy-element build",
-    "build-hooks": "cross-env NODE_ENV=production pnpm --filter @toy-element/hooks build",
-    "build:dev": "cross-env NODE_ENV=development pnpm --filter toy-element build:watch"
+    "build-comp": "cross-env NODE_ENV=production pnpm --filter oxo-ui build",
+    "build-hooks": "cross-env NODE_ENV=production pnpm --filter @oxo-ui/hooks build",
+    "build:dev": "cross-env NODE_ENV=development pnpm --filter oxo-ui build:watch"
   },
   "keywords": [],
   "author": "",
@@ -49,16 +49,16 @@
     "vue3-i18n": "^1.1.5"
   },
   "dependencies": {
-    "@toy-element/hooks": "workspace:*",
-    "@toy-element/theme": "workspace:*",
-    "@toy-element/utils": "workspace:*",
-    "@toy-element/locale": "workspace:*",
-    "@toy-element/vite-plugins": "workspace:*",
+    "@oxo-ui/hooks": "workspace:*",
+    "@oxo-ui/theme": "workspace:*",
+    "@oxo-ui/utils": "workspace:*",
+    "@oxo-ui/locale": "workspace:*",
+    "@oxo-ui/vite-plugins": "workspace:*",
     "@vitest/coverage-v8": "^1.4.0",
     "@vue/test-utils": "^2.4.5",
     "jsdom": "^24.0.0",
     "lodash-es": "^4.17.21",
-    "toy-element": "workspace:*",
+    "oxo-ui": "workspace:*",
     "vue": "^3.4.19"
   }
 }

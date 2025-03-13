@@ -1,7 +1,7 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import ToyElement,{zhCn} from 'toy-element'
+import ToyElement from 'oxo-ui'
 
-import "toy-element/dist/index.css"
+import "oxo-ui/dist/index.css"
 
-createApp(App).use(ToyElement,{locale:zhCn}).mount('#app')
+createApp(App).use(ToyElement).mount('#app')

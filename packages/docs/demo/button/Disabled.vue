@@ -1,18 +1,18 @@
 <template>
   <p>
-    <er-button>Default</er-button>
-    <er-button type="primary">Primary</er-button>
-    <er-button type="success">Success</er-button>
-    <er-button type="info">Info</er-button>
-    <er-button type="warning">Warning</er-button>
-    <er-button type="danger">Danger</er-button>
+    <ox-button>Default</ox-button>
+    <ox-button type="primary">Primary</ox-button>
+    <ox-button type="success">Success</ox-button>
+    <ox-button type="info">Info</ox-button>
+    <ox-button type="warning">Warning</ox-button>
+    <ox-button type="danger">Danger</ox-button>
   </p>
   <p>
-    <er-button disabled>Default</er-button>
-    <er-button type="primary" disabled>Primary</er-button>
-    <er-button type="success" disabled>Success</er-button>
-    <er-button type="info" disabled>Info</er-button>
-    <er-button type="warning" disabled>Warning</er-button>
-    <er-button type="danger" disabled>Danger</er-button>
+    <ox-button disabled>Default</ox-button>
+    <ox-button type="primary" disabled>Primary</ox-button>
+    <ox-button type="success" disabled>Success</ox-button>
+    <ox-button type="info" disabled>Info</ox-button>
+    <ox-button type="warning" disabled>Warning</ox-button>
+    <ox-button type="danger" disabled>Danger</ox-button>
   </p>
 </template>

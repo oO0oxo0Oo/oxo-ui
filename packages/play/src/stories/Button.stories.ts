@@ -1,14 +1,14 @@
 import type { Meta, StoryObj, ArgTypes } from '@storybook/vue3';
 import { fn, within, userEvent, expect } from '@storybook/test';
-import { ErButton, ErButtonGroup } from 'toy-element'
-import  "toy-element/dist/theme/Button.css"
+import { OxButton, OxButtonGroup } from 'oxo-ui'
+import  "oxo-ui/dist/theme/Button.css"
 
-type Story = StoryObj<typeof ErButton> & { argTypes?: ArgTypes }
+type Story = StoryObj<typeof OxButton> & { argTypes?: ArgTypes }
 
-const meta: Meta<typeof ErButton> = {
+const meta: Meta<typeof OxButton> = {
   title: "Example/Button",
-  component: ErButton,
-  subcomponents: { ButtonGroup: ErButtonGroup },
+  component: OxButton,
+  subcomponents: { ButtonGroup: OxButtonGroup },
   tags: ["autodocs"],
   argTypes: {   
     type: {
@@ -69,12 +69,12 @@ export const Default: Story & { args: { content: string } } = {
     content: "Button",
   },
   render: (args) => ({
-    components: { ErButton },
+    components: { OxButton },
     setup() {
       return { args };
     },
     template: container(
-      `<er-button v-bind="args">{{args.content}}</er-button>`
+      `<ox-button v-bind="args">{{args.content}}</ox-button>`
     ),
   }),
 
@@ -96,12 +96,12 @@ export const Circle: Story = {
     icon: "search",
   },
   render: (args) => ({
-    components: { ErButton },
+    components: { OxButton },
     setup() {
       return { args };
     },
     template: container(`
-      <er-button circle v-bind="args"/>
+      <ox-button circle v-bind="args"/>
     `),
   }),
   play: async ({ canvasElement, args, step }) => {
@@ -144,15 +144,15 @@ export const Group: Story & { args: { content1: string; content2: string } } = {
     content2: "Button2",
   },
   render: (args) => ({
-    components: { ErButton, ErButtonGroup },
+    components: { OxButton, OxButtonGroup },
     setup() {
       return { args };
     },
     template: container(`
-       <er-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
-         <er-button v-bind="args">{{args.content1}}</er-button>
-         <er-button v-bind="args">{{args.content2}}</er-button>
-       </er-button-group>
+       <ox-button-group :type="args.groupType" :size="args.groupSize" :disabled="args.groupDisabled">
+         <ox-button v-bind="args">{{args.content1}}</ox-button>
+         <ox-button v-bind="args">{{args.content2}}</ox-button>
+       </ox-button-group>
     `),
   }),
   play: async ({ canvasElement, args, step }) => {

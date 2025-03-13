@@ -15,7 +15,7 @@ function createInstance(
   binding: DirectiveBinding<boolean>
 ) {
   const getProp = <K extends keyof LoadingOptions>(name: K) =>
-    el.getAttribute(`er-loading-${name}`) as MaybeRef<string>;
+    el.getAttribute(`ox-loading-${name}`) as MaybeRef<string>;
   const getModifier = <K extends keyof LoadingOptions>(name: K) =>
     binding.modifiers[name];
 

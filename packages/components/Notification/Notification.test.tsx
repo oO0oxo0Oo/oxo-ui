@@ -1,5 +1,5 @@
 import { describe, test, expect } from "vitest";
-import { rAF } from "@toy-element/utils";
+import { rAF } from "@oxo-ui/utils";
 import { notification } from "./methods";
 
 function getTopValue(element: Element) {
@@ -12,27 +12,27 @@ describe("Notification", () => {
   test("notification() function", async () => {
     const handler = notification({ message: "hello notify", duration: 0 });
     await rAF();
-    expect(document.querySelector(".er-notification")).toBeTruthy();
+    expect(document.querySelector(".ox-notification")).toBeTruthy();
     handler.close();
     await rAF();
-    expect(document.querySelector(".er-notification")).toBeFalsy();
+    expect(document.querySelector(".ox-notification")).toBeFalsy();
   });
 
   test("call notification() function more than once", async () => {
     notification({ message: "hello notify", duration: 0 });
     notification({ message: "hello notify", duration: 0 });
     await rAF();
-    expect(document.querySelectorAll(".er-notification").length).toBe(2);
+    expect(document.querySelectorAll(".ox-notification").length).toBe(2);
     notification.closeAll();
     await rAF();
-    expect(document.querySelectorAll(".er-notification").length).toBe(0);
+    expect(document.querySelectorAll(".ox-notification").length).toBe(0);
   });
 
   test("notification offset", async () => {
     notification({ message: "hello msg", duration: 0, offset: 100 });
     notification({ message: "hello msg", duration: 0, offset: 50 });
     await rAF();
-    const elements = document.querySelectorAll(".er-notification");
+    const elements = document.querySelectorAll(".ox-notification");
     expect(elements.length).toBe(2);
 
     expect(getTopValue(elements[0])).toBe(100);

@@ -1,15 +1,15 @@
 <script setup lang="ts">
 import { ref, computed, watch, useAttrs, shallowRef, nextTick } from "vue";
-import { useFocusController } from "@toy-element/hooks";
+import { useFocusController } from "@oxo-ui/hooks";
 import { useFormItem, useFormDisabled, useFormItemInputId } from "../Form";
 import { each, noop } from "lodash-es";
 import type { InputProps, InputEmits, InputInstance } from "./types";
 
 import Icon from "../Icon/Icon.vue";
-import { debugWarn } from "@toy-element/utils";
+import { debugWarn } from "@oxo-ui/utils";
 
 defineOptions({
-  name: "ErInput",
+  name: "OxInput",
   inheritAttrs: false,
 });
 
@@ -113,10 +113,10 @@ defineExpose<InputInstance>({
 
 <template>
   <div
-    class="er-input"
+    class="ox-input"
     :class="{
-      [`er-input--${type}`]: type,
-      [`er-input--${size}`]: size,
+      [`ox-input--${type}`]: type,
+      [`ox-input--${size}`]: size,
       'is-disabled': isDisabled,
       'is-prepend': $slots.prepend,
       'is-append': $slots.append,
@@ -126,15 +126,15 @@ defineExpose<InputInstance>({
     }"
   >
     <template v-if="type !== 'textarea'">
-      <div v-if="$slots.prepend" class="er-input__prepend">
+      <div v-if="$slots.prepend" class="ox-input__prepend">
         <slot name="prepend"></slot>
       </div>
-      <div class="er-input__wrapper" ref="wrapperRef">
-        <span v-if="$slots.prefix" class="er-input__prefix">
+      <div class="ox-input__wrapper" ref="wrapperRef">
+        <span v-if="$slots.prefix" class="ox-input__prefix">
           <slot name="prefix"></slot>
         </span>
         <input
-          class="er-input__inner"
+          class="ox-input__inner"
           ref="inputRef"
           :id="inputId"
           :type="showPassword ? (pwdVisible ? 'text' : 'password') : type"
@@ -153,37 +153,37 @@ defineExpose<InputInstance>({
         />
         <span
           v-if="$slots.suffix || showClear || showPwdArea"
-          class="er-input__suffix"
+          class="ox-input__suffix"
         >
           <slot name="suffix"></slot>
           <Icon
             icon="circle-xmark"
             v-if="showClear"
-            class="er-input__clear"
+            class="ox-input__clear"
             @click="clear"
             @mousedown.prevent="noop"
           />
           <Icon
             icon="eye"
-            class="er-input__password"
+            class="ox-input__password"
             v-if="showPwdArea && pwdVisible"
             @click="togglePwdVisible"
           />
           <Icon
             icon="eye-slash"
-            class="er-input__password"
+            class="ox-input__password"
             v-if="showPwdArea && !pwdVisible"
             @click="togglePwdVisible"
           />
         </span>
       </div>
-      <div v-if="$slots.append" class="er-input__append">
+      <div v-if="$slots.append" class="ox-input__append">
         <slot name="append"></slot>
       </div>
     </template>
     <template v-else>
       <textarea
-        class="er-textarea__wrapper"
+        class="ox-textarea__wrapper"
         ref="textareaRef"
         :id="inputId"
         :disabled="isDisabled"

@@ -1,8 +1,8 @@
 import type { StoryObj, Meta, ArgTypes } from "@storybook/vue3";
 import { ref, watch } from "vue";
 import { fn } from "@storybook/test";
-import { ErAlert, type AlertInstance } from "toy-element";
-import "toy-element/dist/theme/Alert.css";
+import { ErAlert, type AlertInstance } from "oxo-ui";
+import "oxo-ui/dist/theme/Alert.css";
 
 type Story = StoryObj<typeof ErAlert> & { argTypes?: ArgTypes };
 

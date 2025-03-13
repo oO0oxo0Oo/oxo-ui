@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import type { SelectOptionProps } from "./types";
 
-import { RenderVnode } from "@toy-element/utils";
+import { RenderVnode } from "@oxo-ui/utils";
 import { computed, inject } from "vue";
 import { eq, every, get } from "lodash-es";
 import { SELECT_CTX_KEY } from "./constants";
 
-defineOptions({ name: "ErOption" });
+defineOptions({ name: "OxOption" });
 const props = withDefaults(defineProps<SelectOptionProps>(), {
   disabled: false,
 });
@@ -28,7 +28,7 @@ function handleClick() {
 
 <template>
   <li
-    class="er-select__menu-item"
+    class="ox-select__menu-item"
     :class="{
       'is-disabled': disabled,
       'is-selected': selected,

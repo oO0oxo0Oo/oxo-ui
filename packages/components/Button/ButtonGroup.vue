@@ -4,7 +4,7 @@ import { provide, reactive, toRef } from "vue";
 import { BUTTON_GROUP_CTX_KEY } from "./constants";
 
 defineOptions({
-  name: "ErButtonGroup",
+  name: "OxButtonGroup",
 });
 const props = defineProps<ButtonGroupProps>();
 
@@ -19,7 +19,7 @@ provide(
 </script>
 
 <template>
-  <div class="er-button-group">
+  <div class="ox-button-group">
     <slot></slot>
   </div>
 </template>

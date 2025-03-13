@@ -1,15 +1,15 @@
 // build/vite.es.config.ts
-import { defineConfig } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/vite@5.2.11_@types+node@20.12.11_sass@1.83.0_terser@5.31.0/node_modules/vite/dist/node/index.js";
+import { defineConfig } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/vite@5.2.11_@types+node@20.12.11_sass@1.83.0_terser@5.31.0/node_modules/vite/dist/node/index.js";
 import { readdir, readdirSync } from "fs";
 import { resolve } from "path";
-import { defer, delay, filter, map } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js";
-import { visualizer } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/rollup-plugin-visualizer@5.13.1_rollup@4.17.2/node_modules/rollup-plugin-visualizer/dist/plugin/index.js";
-import dts from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/vite-plugin-dts@3.9.1_@types+node@20.12.11_rollup@4.17.2_typescript@5.7.2_vite@5.2.11_@types+_ptkn27dehddgrp3ry5x5xgytz4/node_modules/vite-plugin-dts/dist/index.mjs";
-import shell from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/shelljs@0.8.5/node_modules/shelljs/shell.js";
-import vue from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/@vitejs+plugin-vue@5.0.4_vite@5.2.11_@types+node@20.12.11_sass@1.83.0_terser@5.31.0__vue@3.4.27_typescript@5.4.5_/node_modules/@vitejs/plugin-vue/dist/index.mjs";
-import { hooksPlugin as hooks } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/libs/vite-plugins/.dist/index.js";
-import terser from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/toy-element/node_modules/.pnpm/@rollup+plugin-terser@0.4.4_rollup@4.17.2/node_modules/@rollup/plugin-terser/dist/es/index.js";
-var __vite_injected_original_dirname = "D:\\HuaweiMoveData\\Users\\86186\\Desktop\\code\\toy-element\\packages\\core\\build";
+import { defer, delay, filter, map } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/lodash-es@4.17.21/node_modules/lodash-es/lodash.js";
+import { visualizer } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/rollup-plugin-visualizer@5.13.1_rollup@4.17.2/node_modules/rollup-plugin-visualizer/dist/plugin/index.js";
+import dts from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/vite-plugin-dts@3.9.1_@types+node@20.12.11_rollup@4.17.2_typescript@5.7.2_vite@5.2.11_@types+_ptkn27dehddgrp3ry5x5xgytz4/node_modules/vite-plugin-dts/dist/index.mjs";
+import shell from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/shelljs@0.8.5/node_modules/shelljs/shell.js";
+import vue from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/@vitejs+plugin-vue@5.0.4_vite@5.2.11_@types+node@20.12.11_sass@1.83.0_terser@5.31.0__vue@3.4.27_typescript@5.4.5_/node_modules/@vitejs/plugin-vue/dist/index.mjs";
+import { hooksPlugin as hooks } from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/libs/vite-plugins/.dist/index.js";
+import terser from "file:///D:/HuaweiMoveData/Users/86186/Desktop/code/oxo-ui/node_modules/.pnpm/@rollup+plugin-terser@0.4.4_rollup@4.17.2/node_modules/@rollup/plugin-terser/dist/es/index.js";
+var __vite_injected_original_dirname = "D:\\HuaweiMoveData\\Users\\86186\\Desktop\\code\\oxo-ui\\packages\\core\\build";
 var TRY_MOVE_STYLES_DELAY = 800;
 var isProd = process.env.NODE_ENV === "production";
 var isDev = process.env.NODE_ENV === "development";

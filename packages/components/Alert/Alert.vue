@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import type { AlertProps, AlertEmits, AlertInstance } from "./types";
 import { ref, computed } from "vue";
-import { typeIconMap } from "@toy-element/utils";
-import ErIcon from "../Icon/Icon.vue";
+import { typeIconMap } from "@oxo-ui/utils";
+import OxIcon from "../Icon/Icon.vue";
 
 defineOptions({
-  name: "ErAlert",
+  name: "OxAlert",
 });
 const props = withDefaults(defineProps<AlertProps>(), {
   effect: "light",
@@ -36,36 +36,36 @@ defineExpose<AlertInstance>({
 </script>
 
 <template>
-  <transition name="er-alert-fade">
+  <transition name="ox-alert-fade">
     <div
       v-show="visible"
-      class="er-alert"
+      class="ox-alert"
       role="alert"
       :class="{
-        [`er-alert__${type}`]: type,
-        [`er-alert__${effect}`]: effect,
+        [`ox-alert__${type}`]: type,
+        [`ox-alert__${effect}`]: effect,
         'text-center': center,
       }"
     >
-      <er-icon
+      <ox-icon
         v-if="showIcon"
-        class="er-alert__icon"
+        class="ox-alert__icon"
         :class="{ 'big-icon': withDescription }"
         :icon="iconName"
       />
-      <div class="er-alert__content">
+      <div class="ox-alert__content">
         <span
-          class="er-alert__title"
+          class="ox-alert__title"
           :class="{ 'with-desc': withDescription }"
           :style="{ display: center && !showIcon ? 'flow' : 'inline' }"
         >
           <slot name="title">{{ title }}</slot>
         </span>
-        <p class="er-alert__description">
+        <p class="ox-alert__description">
           <slot>{{ description }}</slot>
         </p>
-        <div class="er-alert__close" v-if="closable">
-          <er-icon @click.stop="close" icon="xmark" />
+        <div class="ox-alert__close" v-if="closable">
+          <ox-icon @click.stop="close" icon="xmark" />
         </div>
       </div>
     </div>

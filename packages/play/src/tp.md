@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ErButton, ErPopconfirm} from 'toy-element';
+import { ErButton, ErPopconfirm} from 'oxo-ui';
 function confirm(){
   console.log('confirm')
 }

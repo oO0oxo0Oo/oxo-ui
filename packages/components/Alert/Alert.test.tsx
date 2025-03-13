@@ -3,8 +3,8 @@ import type { AlertType } from "./types";
 import { mount } from "@vue/test-utils";
 import Alert from "./Alert.vue";
 import Icon from "../Icon/Icon.vue";
-import { ErAlert } from ".";
-import { withInstall } from "@toy-element/utils";
+import { OxAlert } from ".";
+import { withInstall } from "@oxo-ui/utils";
 
 describe("Alert.vue", () => {
   const title = "Test Alert" as const;
@@ -18,7 +18,7 @@ describe("Alert.vue", () => {
         default: desc,
       },
       global: {
-        stubs: ["ErIcon"],
+        stubs: ["OxIcon"],
       },
     });
     expect(wrapper.text()).toContain(title);
@@ -56,7 +56,7 @@ describe("Alert.vue", () => {
         default: desc,
       },
       global: {
-        stubs: ["ErIcon"],
+        stubs: ["OxIcon"],
       },
     });
 
@@ -79,7 +79,7 @@ describe("Alert.vue", () => {
         default: desc,
       },
       global: {
-        stubs: ["ErIcon"],
+        stubs: ["OxIcon"],
       },
     });
     wrapper.findComponent(Icon).trigger("click");
@@ -110,7 +110,7 @@ describe("Alert.vue", () => {
       },
     });
     //class
-    const rootNode = wrapper.find(".er-alert");
+    const rootNode = wrapper.find(".ox-alert");
     expect(rootNode.classes()).toContain("text-center");
   });
 
@@ -118,7 +118,7 @@ describe("Alert.vue", () => {
     const wrapper = mount(Alert, {
       props: { closable: false },
     });
-    expect(wrapper.find(".er-alert__close").exists()).toBe(false);
+    expect(wrapper.find(".ox-alert__close").exists()).toBe(false);
   });
 
   it("should toggle visibility when open and close methods are called", async () => {
@@ -126,24 +126,24 @@ describe("Alert.vue", () => {
       props: { title, closable: false },
     });
     await wrapper.vm.close();
-    expect(wrapper.find(".er-alert").attributes().style).toBe("display: none;");
+    expect(wrapper.find(".ox-alert").attributes().style).toBe("display: none;");
     await wrapper.vm.open();
-    expect(wrapper.find(".er-alert").attributes().style).toBe("");
+    expect(wrapper.find(".ox-alert").attributes().style).toBe("");
   });
 });
 
 describe("Alert/index", () => {
   it("should be exported with withInstall()", () => {
-    expect(ErAlert.install).toBeDefined();
+    expect(OxAlert.install).toBeDefined();
   });
   it("component should be exported", () => {
-    expect(ErAlert).toBe(Alert);
+    expect(OxAlert).toBe(Alert);
   });
 
   // 可选
   it("should enhance Alert component", () => {
     const enhancedAlert = withInstall(Alert);
-    expect(enhancedAlert).toBe(ErAlert);
+    expect(enhancedAlert).toBe(OxAlert);
   });
 
   // 可选

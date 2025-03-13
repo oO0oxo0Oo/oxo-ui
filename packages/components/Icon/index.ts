@@ -1,7 +1,7 @@
 import Icon from "./Icon.vue";
 
-import { withInstall } from "@toy-element/utils";
+import { withInstall } from "@oxo-ui/utils";
 
-export const ErIcon = withInstall(Icon);
+export const OxIcon = withInstall(Icon);
 
 export * from "./types";

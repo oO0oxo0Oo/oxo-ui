@@ -1,5 +1,5 @@
 {
-  "name": "@toy-element/vite-plugins",
+  "name": "@oxo-ui/vite-plugins",
   "version": "1.0.0",
   "private": true,
   "type": "module",

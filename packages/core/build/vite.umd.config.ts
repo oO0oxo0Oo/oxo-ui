@@ -6,7 +6,7 @@ import { readFile } from "fs";
 
 import shell from 'shelljs';
 import vue from "@vitejs/plugin-vue";
-import {hooksPlugin as hooks} from "@toy-element/vite-plugins"
+import {hooksPlugin as hooks} from "@oxo-ui/vite-plugins"
 import terser from "@rollup/plugin-terser";
 
 const TRY_MOVE_STYLES_DELAY=800 as const

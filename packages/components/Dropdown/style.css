@@ -1,24 +1,24 @@
-.er-dropdown .er-dropdown__menu {
-  --er-dropdown-menuItem-hover-fill: var(--er-color-primary-light-9);
-  --er-dropdown-menuItem-hover-color: var(--er-color-primary);
-  --er-dropdown-menuItem-disabled-color: var(--er-border-color-lighter);
-  --er-dropdown-menuItem-divided-color: var(--er-border-color-lighter);
+.ox-dropdown .ox-dropdown__menu {
+  --ox-dropdown-menuItem-hover-fill: var(--ox-color-primary-light-9);
+  --ox-dropdown-menuItem-hover-color: var(--ox-color-primary);
+  --ox-dropdown-menuItem-disabled-color: var(--ox-border-color-lighter);
+  --ox-dropdown-menuItem-divided-color: var(--ox-border-color-lighter);
 }
-.er-dropdown {
+.ox-dropdown {
   display: inline-block;
-  .er-tooltip {
-    --er-popover-padding: 5px 0;
+  .ox-tooltip {
+    --ox-popover-padding: 5px 0;
   }
   &.is-disabled>*{
-    color: var(--er-text-color-placeholder) !important;
+    color: var(--ox-text-color-placeholder) !important;
     cursor: not-allowed !important;
   }
 }
-.er-dropdown__menu {
+.ox-dropdown__menu {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  .er-dropdown__item {
+  .ox-dropdown__item {
     display: flex;
     align-items: center;
     white-space: nowrap;
@@ -26,33 +26,33 @@
     line-height: 22px;
     padding: 5px 16px;
     margin: 0;
-    font-size: var(--er-font-size-base);
-    color: var(--er-text-color-regular);
+    font-size: var(--ox-font-size-base);
+    color: var(--ox-text-color-regular);
     cursor: pointer;
     outline: none;
     &:hover {
-      background-color: var(--er-dropdown-menuItem-hover-fill);
-      color: var(--er-dropdown-menuItem-hover-color);
+      background-color: var(--ox-dropdown-menuItem-hover-fill);
+      color: var(--ox-dropdown-menuItem-hover-color);
     }
     &.is-disabled {
-      color: var(--er-dropdown-menuItem-disabled-color);
+      color: var(--ox-dropdown-menuItem-disabled-color);
       cursor: not-allowed;
       background-image: none;
     }
   }
   
-  .er-dropdown__item--large {
+  .ox-dropdown__item--large {
     padding: 7px 20px;
     line-height: 22px;
     font-size: 14px;
   }
-  .er-dropdown__item--small {
+  .ox-dropdown__item--small {
     padding: 2px 12px;
     line-height: 20px;
     font-size: 12px;
   }
   .divided-placeholder {
     margin: 6px 0;
-    border-top: 1px solid var(--er-dropdown-menuItem-divided-color);
+    border-top: 1px solid var(--ox-dropdown-menuItem-divided-color);
   }
 }

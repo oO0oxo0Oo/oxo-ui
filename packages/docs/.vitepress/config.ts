@@ -6,9 +6,9 @@ import {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-  title: "Toy-Element",
+  title: "Oxo-UI",
   description: "高仿 ElementPlus 组件库",
-  base: '/toy-element/',
+  base: '/oxo-ui/',
   appearance: false,
 
   themeConfig: {
@@ -33,13 +33,14 @@ export default defineConfig({
       },
     ],
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/oO0oxo0Oo/toy-element' }
+      { icon: 'github', link: 'https://github.com/oO0oxo0Oo/oxo-ui' }
     ]
   },
   markdown: {
     config:(md)=> {
       md.use(containerPreview);
       md.use(componentPreview);
+      
     },
   },
 })

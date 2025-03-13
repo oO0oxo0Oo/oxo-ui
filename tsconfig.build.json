@@ -26,7 +26,7 @@
     "types":["node"],
     "baseUrl":"./",
     "paths": {
-      "@toy-element/components": ["./packages/components"]
+      "@oxo-ui/components": ["./packages/components"]
     }
   },
   "include": [

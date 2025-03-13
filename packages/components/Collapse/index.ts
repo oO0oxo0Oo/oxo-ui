@@ -1,8 +1,8 @@
 import Collapse from "./Collapse.vue";
 import CollapseItem from "./CollapseItem.vue";
-import { withInstall } from "@toy-element/utils";
+import { withInstall } from "@oxo-ui/utils";
 
-export const ErCollapse = withInstall(Collapse);
-export const ErCollapseItem = withInstall(CollapseItem);
+export const OxCollapse = withInstall(Collapse);
+export const OxCollapseItem = withInstall(CollapseItem);
 
 export * from './types'

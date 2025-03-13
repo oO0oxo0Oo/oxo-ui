@@ -1,4 +1,4 @@
-import type { Language, TranslatePair } from "@toy-element/locale";
+import type { Language, TranslatePair } from "@oxo-ui/locale";
 
 export interface ConfigProviderProps {
   locale?: Language;

@@ -3,12 +3,12 @@ import type { MessageProps, MessageCompInstance } from "./types";
 import { computed, onMounted, ref, watch } from "vue";
 import { getLastBottomOffset } from "./methods";
 import { delay, bind } from "lodash-es";
-import { useOffset, useEventListener } from "@toy-element/hooks";
-import { addUnit } from "@toy-element/utils";
-import { typeIconMap, RenderVnode } from "@toy-element/utils";
-import ErIcon from "../Icon/Icon.vue";
+import { useOffset, useEventListener } from "@oxo-ui/hooks";
+import { addUnit } from "@oxo-ui/utils";
+import { typeIconMap, RenderVnode } from "@oxo-ui/utils";
+import OxIcon from "../Icon/Icon.vue";
 
-defineOptions({ name: "ErMessage" });
+defineOptions({ name: "OxMessage" });
 
 const props = withDefaults(defineProps<MessageProps>(), {
   type: "info",
@@ -77,9 +77,9 @@ defineExpose<MessageCompInstance>({
   >
     <div
       ref="messageRef"
-      class="er-message"
+      class="ox-message"
       :class="{
-        [`er-message--${type}`]: type,
+        [`ox-message--${type}`]: type,
         'is-close': showClose,
         'text-center': center,
       }"
@@ -89,14 +89,14 @@ defineExpose<MessageCompInstance>({
       @mouseenter="clearTimer"
       @mouseleave="startTimmer"
     >
-      <er-icon class="er-message__icon" :icon="iconName" />
-      <div class="er-message__content">
+      <ox-icon class="ox-message__icon" :icon="iconName" />
+      <div class="ox-message__content">
         <slot>
           <render-vnode v-if="message" :vNode="message" />
         </slot>
       </div>
-      <div class="er-message__close" v-if="showClose">
-        <er-icon icon="xmark" @click.stop="close" />
+      <div class="ox-message__close" v-if="showClose">
+        <ox-icon icon="xmark" @click.stop="close" />
       </div>
     </div>
   </Transition>

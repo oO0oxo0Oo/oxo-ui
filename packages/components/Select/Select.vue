@@ -21,7 +21,7 @@ import {
   type VNode,
   onMounted,
 } from "vue";
-import { useId, useFocusController, useClickOutside } from "@toy-element/hooks";
+import { useId, useFocusController, useClickOutside } from "@oxo-ui/hooks";
 import { POPPER_OPTIONS, SELECT_CTX_KEY } from "./constants";
 import {
   each,
@@ -42,13 +42,13 @@ import {
 
 import useKeyMap from "./useKeyMap";
 
-import ErOption from "./Option.vue";
-import ErTooltip from "../Tooltip/Tooltip.vue";
-import ErInput from "../Input/Input.vue";
-import ErIcon from "../Icon/Icon.vue";
-import { debugWarn, RenderVnode } from "@toy-element/utils";
+import OxOption from "./Option.vue";
+import OxTooltip from "../Tooltip/Tooltip.vue";
+import OxInput from "../Input/Input.vue";
+import OxIcon from "../Icon/Icon.vue";
+import { debugWarn, RenderVnode } from "@oxo-ui/utils";
 
-const COMPONENT_NAME = "ErSelect";
+const COMPONENT_NAME = "OxSelect";
 
 defineOptions({ name: COMPONENT_NAME });
 
@@ -78,7 +78,7 @@ const selectStates = reactive<SelectStates>({
 
 const isDisabled = computed(() => props.disabled);
 const children = computed(() =>
-  filter(slots?.default?.(), (child) => eq(child.type, ErOption))
+  filter(slots?.default?.(), (child) => eq(child.type, OxOption))
 );
 const hasChildren = computed(() => size(children.value) > 0);
 const showClear = computed(
@@ -359,7 +359,7 @@ defineExpose<SelectInstance>({
 <template>
   <div
     ref="selectRef"
-    class="er-select"
+    class="ox-select"
     :class="{
       'is-disabled': isDisabled,
     }"
@@ -367,7 +367,7 @@ defineExpose<SelectInstance>({
     @mouseenter="selectStates.mouseHover = true"
     @mouseleave="selectStates.mouseHover = false"
   >
-    <er-tooltip
+    <ox-tooltip
       ref="tooltipRef"
       placement="bottom-start"
       :popper-options="POPPER_OPTIONS"
@@ -376,7 +376,7 @@ defineExpose<SelectInstance>({
     >
       <template #default>
         <div ref="inputWrapperRef">
-          <er-input
+          <ox-input
             ref="inputRef"
             v-model="selectStates.inputValue"
             :id="inputId"
@@ -389,33 +389,33 @@ defineExpose<SelectInstance>({
             @keydown="handleKeyDown"
           >
             <template #suffix>
-              <er-icon
+              <ox-icon
                 v-if="showClear"
                 icon="circle-xmark"
-                class="er-input__clear"
+                class="ox-input__clear"
                 @click.stop="handleClear"
                 @mousedown.prevent="noop"
               />
-              <er-icon
+              <ox-icon
                 v-else
                 class="header-angle"
                 icon="angle-down"
                 :class="{ 'is-active': isDropdownVisible }"
               />
             </template>
-          </er-input>
+          </ox-input>
         </div>
       </template>
       <template #content>
-        <div class="er-select__loading" v-if="selectStates.loading">
-          <er-icon icon="spinner" spin />
+        <div class="ox-select__loading" v-if="selectStates.loading">
+          <ox-icon icon="spinner" spin />
         </div>
-        <div class="er-select__nodata" v-else-if="filterable && isNoData">
+        <div class="ox-select__nodata" v-else-if="filterable && isNoData">
           No data
         </div>
-        <ul class="er-select__menu">
+        <ul class="ox-select__menu">
           <template v-if="!hasChildren">
-            <er-option
+            <ox-option
               v-for="item in filteredOptions"
               :key="item.value"
               v-bind="item"
@@ -431,7 +431,7 @@ defineExpose<SelectInstance>({
           </template>
         </ul>
       </template>
-    </er-tooltip>
+    </ox-tooltip>
   </div>
 </template>
 

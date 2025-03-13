@@ -12,7 +12,7 @@ import { reactive, toRefs, provide } from "vue";
 import { each, filter, includes, size } from "lodash-es";
 import type { ValidateFieldsError } from "async-validator";
 
-defineOptions({ name: "ErForm" });
+defineOptions({ name: "OxForm" });
 
 const props = withDefaults(defineProps<FormProps>(), {
   showMessage: true,
@@ -104,7 +104,7 @@ defineExpose<FormInstance>({
 </script>
 
 <template>
-  <form class="er-form">
+  <form class="ox-form">
     <slot></slot>
   </form>
 </template>

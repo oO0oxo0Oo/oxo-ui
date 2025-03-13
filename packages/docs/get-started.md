@@ -10,7 +10,7 @@ next:
 
 
 ```bash
-npm i @toy-element --save
+npm i @oxo-ui --save
 ```
 
 ## 开始使用
@@ -20,37 +20,40 @@ npm i @toy-element --save
 
 ```js
 // 引入所有组件
-import EricUI from 'toy-element'
+import OxoUI from 'oxo-ui'
 // 引入样式
-import 'toy-element/dist/style.css'
+import 'oxo-ui/dist/index.css'
 
 import App from './App.vue'
 // 全局使用
-createApp(App).use(ErElement).mount('#app')
+createApp(App).use(OxoUI).mount('#app')
 ```
 
 ```vue
 <template>
-  <er-button>我是 Button</er-button>
+  <ox-button>我是 Button</ox-button>
 </template>
 ```
 
 **单个导入**
 
-toy-element 提供了基于 ES Module 的开箱即用的 Tree Shaking 功能。
+Oxo-UI 提供了基于 ES Module 的开箱即用的 Tree Shaking 功能。
 
 
 ```vue
 <template>
-  <er-button>我是 Button</er-button>
+  <ox-button>我是 Button</ox-button>
 </template>
 <script>
-  import { ErButton } from ' er-element'
+  import {OxButton } from ' oxo-ui'
   export default {
-    components: { ErButton },
+    components: {OxButton },
   }
 </script>
 ```
+
+::: api-table src=components/Button/types.ts
+:::
 
 ## 亮点
 

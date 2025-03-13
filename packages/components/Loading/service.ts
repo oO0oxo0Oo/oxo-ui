@@ -1,12 +1,12 @@
 import type { LoadingOptions, LoadingOptionsResolved } from "./types";
 import { ref, createApp, reactive, nextTick } from "vue";
-import { useZIndex } from "@toy-element/hooks";
+import { useZIndex } from "@oxo-ui/hooks";
 import LoadingComp from "./Loading.vue";
 import { defer, delay, isNil, isString } from "lodash-es";
 
-const RELATIVE_CLASS = "er-loading-parent--relative" as const;
-const HIDDEN_CLASS = "er-loading-parent--hiden" as const;
-const LOADING_NUMB_KEY = "er-loading-numb" as const;
+const RELATIVE_CLASS = "ox-loading-parent--relative" as const;
+const HIDDEN_CLASS = "ox-loading-parent--hiden" as const;
+const LOADING_NUMB_KEY = "ox-loading-numb" as const;
 
 const instanceMap: Map<HTMLElement, LoadingInstance> = new Map();
 const { nextZIndex } = useZIndex(3000);

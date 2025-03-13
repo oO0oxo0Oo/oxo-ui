@@ -3,9 +3,9 @@ import { ref, computed, inject } from "vue";
 import type { ButtonProps, ButtonEmits, ButtonInstance } from "./types";
 import { BUTTON_GROUP_CTX_KEY } from "./constants";
 import { throttle } from "lodash-es";
-import ErIcon from "../Icon/Icon.vue";
+import OxIcon from "../Icon/Icon.vue";
 defineOptions({
-  name: "ErButton",
+  name: "OxButton",
 });
 const props = withDefaults(defineProps<ButtonProps>(), {
   tag: "button",
@@ -46,10 +46,10 @@ defineExpose<ButtonInstance>({
   <component
     :is="tag"
     ref="_ref"
-    class="er-button"
+    class="ox-button"
     :class="{
-      [`er-button--${type}`]: type,
-      [`er-button--${size}`]: size,
+      [`ox-button--${type}`]: type,
+      [`ox-button--${size}`]: size,
       'is-plain': plain,
       'is-round': round,
       'is-circle': circle,
@@ -66,7 +66,7 @@ defineExpose<ButtonInstance>({
   >
     <template v-if="loading">
       <slot name="loading">
-        <er-icon
+        <ox-icon
           class="loading-icon"
           :icon="loadingIcon ?? 'spinner'"
           :style="iconStyle"
@@ -75,7 +75,7 @@ defineExpose<ButtonInstance>({
         />
       </slot>
     </template>
-    <er-icon
+    <ox-icon
       :icon="icon"
       size="1x"
       :style="iconStyle"

@@ -11,7 +11,7 @@ import {
   type MaybeRef,
   type WatchStopHandle,
 } from "vue";
-import { useId, useProp } from "@toy-element/hooks";
+import { useId, useProp } from "@oxo-ui/hooks";
 import type { FormItemContext } from "./types";
 export function useFormItem() {
   const form = inject(FORM_CTX_KEY, void 0);

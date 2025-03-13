@@ -3,7 +3,7 @@ import { computed, onUnmounted, ref, watch, watchEffect, type Ref } from "vue";
 import { createPopper, type Instance } from "@popperjs/core";
 import type { TooltipProps, TooltipEmits, TooltipInstance } from "./types";
 import { bind, debounce, type DebouncedFunc } from "lodash-es";
-import { useClickOutside } from "@toy-element/hooks"
+import { useClickOutside } from "@oxo-ui/hooks"
 
 import useEventsToTiggerNode from "./useEventsToTiggerNode"
 
@@ -13,7 +13,7 @@ interface _TooltipProps extends TooltipProps {
 }
 
 defineOptions({
-  name: "ErTooltip"
+  name: "OxTooltip"
 })
 const props = withDefaults(defineProps<_TooltipProps>(), {
   placement: "bottom",
@@ -195,9 +195,9 @@ defineExpose<TooltipInstance>({
 </script>
 
 <template>
-  <div class="er-tooltip" ref="containerNode" v-on="outerEvents">
+  <div class="ox-tooltip" ref="containerNode" v-on="outerEvents">
     <div
-      class="er-tooltip__trigger"
+      class="ox-tooltip__trigger"
       ref="_triggerNode"
       v-on="events"
       v-if="!virtualTriggering"
@@ -208,7 +208,7 @@ defineExpose<TooltipInstance>({
 
     <transition :name="transition" @after-leave="destroyPopperInstance">
       <div
-        class="er-tooltip__popper"
+        class="ox-tooltip__popper"
         ref="popperNode"
         v-on="dropdownEvents"
         v-if="visible"

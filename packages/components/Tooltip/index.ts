@@ -1,6 +1,6 @@
 import Tooltip from "./Tooltip.vue";
-import { withInstall} from "@toy-element/utils";
+import { withInstall} from "@oxo-ui/utils";
 
-export const ErTooltip = withInstall(Tooltip)
+export const OxTooltip = withInstall(Tooltip)
 
 export * from './types'

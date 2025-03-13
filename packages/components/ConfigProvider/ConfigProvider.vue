@@ -3,7 +3,7 @@ import type { ConfigProviderProps } from "./types";
 import { provideGlobalConfig } from "./hooks";
 
 defineOptions({
-  name: "ErConfigProvider",
+  name: "OxConfigProvider",
 });
 const props = defineProps<ConfigProviderProps>();
 const config = provideGlobalConfig(props);

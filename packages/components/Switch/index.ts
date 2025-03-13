@@ -1,6 +1,6 @@
 import Switch from "./Switch.vue";
-import { withInstall } from "@toy-element/utils";
+import { withInstall } from "@oxo-ui/utils";
 
-export const ErSwitch = withInstall(Switch);
+export const OxSwitch = withInstall(Switch);
 
 export * from "./types";

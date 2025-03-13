@@ -1,75 +1,75 @@
-.er-alert {
-  --er-alert-padding: 8px 16px;
-  --er-alert-border-radius-base: var(--er-border-radius-base);
-  --er-alert-bg-color: var(--er-color-white);
-  --er-alert-title-font-size: 14px;
-  --er-alert-title-font-size-with-desc: 16px;
-  --er-alert-desc-font-size: 14px;
-  --er-alert-text-color: var(--er-text-color-primary);
-  --er-alert-top-margin: 20px;
-  --er-alert-icon-size: 16px;
-  --er-alert-icon-margin: 8px;
-  --er-alert-big-icon-size: 28px;
-  --er-alert-big-icon-margin: 12px;
+.ox-alert {
+  --ox-alert-padding: 8px 16px;
+  --ox-alert-border-radius-base: var(--ox-border-radius-base);
+  --ox-alert-bg-color: var(--ox-color-white);
+  --ox-alert-title-font-size: 14px;
+  --ox-alert-title-font-size-with-desc: 16px;
+  --ox-alert-desc-font-size: 14px;
+  --ox-alert-text-color: var(--ox-text-color-primary);
+  --ox-alert-top-margin: 20px;
+  --ox-alert-icon-size: 16px;
+  --ox-alert-icon-margin: 8px;
+  --ox-alert-big-icon-size: 28px;
+  --ox-alert-big-icon-margin: 12px;
 }
-.er-alert {
-  padding: var(--er-alert-padding);
+.ox-alert {
+  padding: var(--ox-alert-padding);
   margin: 0;
   box-sizing: border-box;
-  border-radius: var(--er-alert-border-radius-base);
+  border-radius: var(--ox-alert-border-radius-base);
   position: relative;
-  background-color: var(--er-alert-bg-color);
+  background-color: var(--ox-alert-bg-color);
   overflow: hidden;
   opacity: 1;
   display: flex;
   align-items: center;
-  transition: opacity var(--er-transition-duration);
-  margin-top: var(--er-alert-top-margin);
-  .er-alert__icon {
-    color: var(--er-alert-text-color);
-    font-size: var(--er-alert-icon-size);
-    width: var(--er-alert-icon-size);
-    margin-right: var(--er-alert-icon-margin);
+  transition: opacity var(--ox-transition-duration);
+  margin-top: var(--ox-alert-top-margin);
+  .ox-alert__icon {
+    color: var(--ox-alert-text-color);
+    font-size: var(--ox-alert-icon-size);
+    width: var(--ox-alert-icon-size);
+    margin-right: var(--ox-alert-icon-margin);
     &.big-icon{
-      font-size: var(--er-alert-big-icon-size);
-      width: var(--er-alert-big-icon-size);
-      margin-right: var(--er-alert-big-icon-margin);
+      font-size: var(--ox-alert-big-icon-size);
+      width: var(--ox-alert-big-icon-size);
+      margin-right: var(--ox-alert-big-icon-margin);
     }
   }
-  .er-alert__content {
-    color:  var(--er-alert-text-color);
+  .ox-alert__content {
+    color:  var(--ox-alert-text-color);
     vertical-align: text-top;
-    .er-alert__title{
-      font-size: var(--er-alert-title-font-size);
+    .ox-alert__title{
+      font-size: var(--ox-alert-title-font-size);
       line-height: 24px;
       &.with-desc {
-        font-size: var(--er-alert-title-font-size-with-desc);
+        font-size: var(--ox-alert-title-font-size-with-desc);
       }
     } 
-    .er-alert__description{
-      font-size: var(--er-alert-desc-font-size);
+    .ox-alert__description{
+      font-size: var(--ox-alert-desc-font-size);
       margin: 0;
     }
 
-    .er-alert__close {
-      font-size: var(--er-alert-close-font-size);
+    .ox-alert__close {
+      font-size: var(--ox-alert-close-font-size);
       opacity: 1;
       position: absolute;
       top: 12px;
       right: 15px;
       cursor: pointer;
-      :deep(.er-icon) {
+      :deep(.ox-icon) {
         vertical-align: top;
       }
     }
-    &.er-alert__light {
-      .er-alert__close {
-        color: var(--er-text-color-placeholder);
+    &.ox-alert__light {
+      .ox-alert__close {
+        color: var(--ox-text-color-placeholder);
       }
     }
-    &.er-alert__dark {
-      .er-alert__close {
-        color: var(--er-color-white);
+    &.ox-alert__dark {
+      .ox-alert__close {
+        color: var(--ox-color-white);
       }
     }
   }
@@ -83,18 +83,18 @@
   }
 }
 
-.er-alert-fade-enter-from,
-.er-alert-fade-leave-to {
+.ox-alert-fade-enter-from,
+.ox-alert-fade-leave-to {
   opacity: 0;
 }
 
 @each $val in success,warning,info,danger { 
-  .er-alert__$(val).er-alert__light {
-    --er-alert-text-color: var(--er-color-$(val));
-    --er-alert-bg-color: var(--er-color-$(val)-light-9);
+  .ox-alert__$(val).ox-alert__light {
+    --ox-alert-text-color: var(--ox-color-$(val));
+    --ox-alert-bg-color: var(--ox-color-$(val)-light-9);
   }
-  .er-alert__$(val).er-alert__dark {
-    --er-alert-text-color: var(--er-color-white);
-    --er-alert-bg-color: var(--er-color-$(val));
+  .ox-alert__$(val).ox-alert__dark {
+    --ox-alert-text-color: var(--ox-color-white);
+    --ox-alert-bg-color: var(--ox-color-$(val));
   }
 }

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, ref, provide } from "vue";
 import { omit, isNil } from "lodash-es";
-import { type ButtonInstance, ErButton, ErButtonGroup } from "../Button/index";
+import { type ButtonInstance, OxButton, OxButtonGroup } from "../Button/index";
 import type { TooltipInstance } from "../Tooltip/types";
 import type {
   DropdownProps,
@@ -10,15 +10,15 @@ import type {
   DropdownInstance,
   DropdownContext,
 } from "./types";
-import { useDisabledStyle } from "@toy-element/hooks";
+import { useDisabledStyle } from "@oxo-ui/hooks";
 
 import { DROPDOWN_CTX_KEY } from "./constants";
 
 import DropdownItem from "./DropdownItem.vue";
-import ErTooltip from "../Tooltip/Tooltip.vue";
+import OxTooltip from "../Tooltip/Tooltip.vue";
 
 defineOptions({
-  name: "ErDropdown",
+  name: "OxDropdown",
   inheritAttrs: false,
 });
 const props = withDefaults(defineProps<DropdownProps>(), {
@@ -53,29 +53,29 @@ defineExpose<DropdownInstance>({
 </script>
 
 <template>
-  <div class="er-dropdown" :class="{ 'is-disabled': props.disabled }">
-    <er-tooltip
+  <div class="ox-dropdown" :class="{ 'is-disabled': props.disabled }">
+    <ox-tooltip
       ref="tooltipRef"
       v-bind="tooltipProps"
       :virtual-triggering="splitButton"
       :virtual-ref="triggerRef?.ref.value"
       @visible-change="$emit('visible-change', $event)"
     >
-      <er-button-group
+      <ox-button-group
         v-if="splitButton"
         :type="type"
         :size="size"
         :disabled="disabled"
       >
-        <er-button @click="$emit('click', $event)">
+        <ox-button @click="$emit('click', $event)">
           <slot name="default"></slot>
-        </er-button>
-        <er-button ref="triggerRef" icon="angle-down" />
-      </er-button-group>
+        </ox-button>
+        <ox-button ref="triggerRef" icon="angle-down" />
+      </ox-button-group>
       <slot name="default" v-else></slot>
 
       <template #content>
-        <div class="er-dropdown__menu">
+        <div class="ox-dropdown__menu">
           <slot name="dropdown">
             <template v-for="item in items" :key="item.command">
               <dropdown-item v-bind="item" />
@@ -83,14 +83,14 @@ defineExpose<DropdownInstance>({
           </slot>
         </div>
       </template>
-    </er-tooltip>
+    </ox-tooltip>
   </div>
 </template>
 
 <style scoped>
 @import "./style.css";
 
-:deep(.er-button-group) {
+:deep(.ox-button-group) {
   & > :last-child {
     padding: 5px 7px;
   }

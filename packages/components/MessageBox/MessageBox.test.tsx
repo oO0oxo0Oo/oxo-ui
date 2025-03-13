@@ -1,6 +1,6 @@
 import type { MessageBoxType } from "./types";
 import { describe, it, expect, vi } from "vitest";
-import { rAF } from "@toy-element/utils";
+import { rAF } from "@oxo-ui/utils";
 import MessageBox from "./methods";
 
 describe("MessageBox Component", () => {
@@ -17,9 +17,9 @@ describe("MessageBox Component", () => {
 
     MessageBox(props);
     await rAF();
-    const header = document.querySelector(".er-message-box__header");
-    const title = document.querySelector(".er-message-box__title");
-    const message = document.querySelector(".er-message-box__message");
+    const header = document.querySelector(".ox-message-box__header");
+    const title = document.querySelector(".ox-message-box__title");
+    const message = document.querySelector(".ox-message-box__message");
 
     expect(title).toBeTruthy();
     expect(header).toBeTruthy();
@@ -40,7 +40,7 @@ describe("MessageBox Component", () => {
     await rAF();
 
     const closeBtn = document.querySelector(
-      ".er-message-box__header-btn"
+      ".ox-message-box__header-btn"
     ) as HTMLButtonElement;
     closeBtn.click();
 
@@ -62,7 +62,7 @@ describe("MessageBox Component", () => {
     await rAF();
 
     const confirmBtn = document.querySelector(
-      ".er-message-box__footer-btn"
+      ".ox-message-box__footer-btn"
     ) as HTMLButtonElement;
     confirmBtn.click();
     await rAF();
@@ -83,7 +83,7 @@ describe("MessageBox Component", () => {
     await rAF();
 
     const cancelBtn = document.querySelector(
-      ".er-message-box__cancel-btn"
+      ".ox-message-box__cancel-btn"
     ) as HTMLButtonElement;
     cancelBtn.click();
 
@@ -109,7 +109,7 @@ describe("MessageBox Component", () => {
     input.dispatchEvent(new Event("input"));
 
     const confirmBtn = document.querySelector(
-      ".er-message-box__confirm-btn"
+      ".ox-message-box__confirm-btn"
     ) as HTMLButtonElement;
     confirmBtn.click();
 

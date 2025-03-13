@@ -1,10 +1,10 @@
 import Form from "./Form.vue";
 import FormItem from "./FormItem.vue";
 
-import { withInstall } from "@toy-element/utils";
+import { withInstall } from "@oxo-ui/utils";
 
-export const ErForm = withInstall(Form);
-export const ErFormItem = withInstall(FormItem);
+export const OxForm = withInstall(Form);
+export const OxFormItem = withInstall(FormItem);
 
 export * from "./types";
 export * from "./hooks";

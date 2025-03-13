@@ -1,6 +1,6 @@
 import Message from "./methods";
-import { withInstallFunction } from "@toy-element/utils";
+import { withInstallFunction } from "@oxo-ui/utils";
 
-export const ErMessage = withInstallFunction(Message, "$message");
+export const OxMessage = withInstallFunction(Message, "$message");
 
 export * from "./types";

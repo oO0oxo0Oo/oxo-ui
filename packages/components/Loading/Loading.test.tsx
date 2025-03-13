@@ -1,4 +1,4 @@
-import { rAF } from "@toy-element/utils";
+import { rAF } from "@oxo-ui/utils";
 import { describe, it, expect } from "vitest";
 import { Loading } from "./service";
 
@@ -11,17 +11,17 @@ describe("Loading", () => {
   it("should render mask", async () => {
     Loading();
     await rAF();
-    expect(document.querySelector(".er-loading__mask")).toBeTruthy();
+    expect(document.querySelector(".ox-loading__mask")).toBeTruthy();
   });
 
   it("should close Loading and remove it from DOM", async () => {
     const instance = Loading();
 
     await rAF();
-    expect(document.querySelector(".er-loading")).toBeTruthy();
+    expect(document.querySelector(".ox-loading")).toBeTruthy();
     instance.close();
     await rAF();
 
-    expect(document.querySelector(".er-loading")).toBeFalsy();
+    expect(document.querySelector(".ox-loading")).toBeFalsy();
   });
 });

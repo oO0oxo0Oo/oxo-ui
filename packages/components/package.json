@@ -1,11 +1,11 @@
 {
-  "name": "@toy-element/components",
+  "name": "@oxo-ui/components",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "cross-env NODE_ENV=test pnpm --filter @toy-element/hooks build && vitest --run --coverage",
-    "test:watch": "cross-env NODE_ENV=test pnpm --filter @toy-element/hooks build && vitest --coverage"
+    "test": "cross-env NODE_ENV=test pnpm --filter @oxo-ui/hooks build && vitest --run --coverage",
+    "test:watch": "cross-env NODE_ENV=test pnpm --filter @oxo-ui/hooks build && vitest --coverage"
   },
   "keywords": [],
   "author": "",

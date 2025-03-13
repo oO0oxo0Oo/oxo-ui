@@ -1,6 +1,6 @@
 import Alert from "./Alert.vue";
-import { withInstall } from "@toy-element/utils";
+import { withInstall } from "@oxo-ui/utils";
 
-export const ErAlert = withInstall(Alert);
+export const OxAlert = withInstall(Alert);
 
 export * from "./types";

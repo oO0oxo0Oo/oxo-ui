@@ -36,11 +36,11 @@ import {
   isNumber,
   endsWith,
 } from "lodash-es";
-import { useId } from "@toy-element/hooks";
+import { useId } from "@oxo-ui/hooks";
 
 import { FORM_CTX_KEY, FORM_ITEM_CTX_KEY } from "./constants";
 
-defineOptions({ name: "ErFormItem" });
+defineOptions({ name: "OxFormItem" });
 
 const props = withDefaults(defineProps<FormItemProps>(), {
   required: void 0,
@@ -253,7 +253,7 @@ defineExpose<FormItemInstance>({
 
 <template>
   <div
-    class="er-form-item"
+    class="ox-form-item"
     :class="{
       'is-error': validateStatus === 'error',
       'is-disabled': isDisabled,
@@ -264,7 +264,7 @@ defineExpose<FormItemInstance>({
   >
     <component
       v-if="hasLabel"
-      class="er-form-item__label"
+      class="ox-form-item__label"
       :class="`position-${ctx?.labelPosition ?? `right`}`"
       :is="labelFor ? 'label' : 'div'"
       :id="labelId"
@@ -274,9 +274,9 @@ defineExpose<FormItemInstance>({
         {{ currentLabel }}
       </slot>
     </component>
-    <div class="er-form-item__content">
+    <div class="ox-form-item__content">
       <slot :validate="validate"></slot>
-      <div class="er-form-item__error-msg" v-if="validateStatus === 'error'">
+      <div class="ox-form-item__error-msg" v-if="validateStatus === 'error'">
         <template v-if="ctx?.showMessage && showMessage">
           <slot name="error" :error="errMsg">{{ errMsg }}</slot>
         </template>
@@ -288,7 +288,7 @@ defineExpose<FormItemInstance>({
 <style scoped>
 @import "./style.css";
 
-.er-form-item {
-  --er-form-lebel-width: v-bind(normalizeLabelWidth) !important;
+.ox-form-item {
+  --ox-form-lebel-width: v-bind(normalizeLabelWidth) !important;
 }
 </style>

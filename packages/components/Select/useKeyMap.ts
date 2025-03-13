@@ -1,4 +1,4 @@
-import type { SelectOptionProps, SelectStates } from "toy-element";
+import type { SelectOptionProps, SelectStates } from "oxo-ui";
 import type { Ref, ComputedRef } from "vue";
 
 interface KeyMapParams {

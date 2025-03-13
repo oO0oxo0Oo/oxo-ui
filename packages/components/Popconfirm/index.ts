@@ -1,6 +1,6 @@
 import Popconfirm from "./Popconfirm.vue"
-import { withInstall } from "@toy-element/utils"
+import { withInstall } from "@oxo-ui/utils"
 
-export const ErPopconfirm =withInstall(Popconfirm);
+export const OxPopconfirm =withInstall(Popconfirm);
 
 export * from "./types"

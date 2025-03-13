@@ -1,6 +1,6 @@
 import Input from './Input.vue'
-import {withInstall} from '@toy-element/utils'
+import {withInstall} from '@oxo-ui/utils'
 
-export const ErInput = withInstall(Input)
+export const OxInput = withInstall(Input)
 
 export * from './types'

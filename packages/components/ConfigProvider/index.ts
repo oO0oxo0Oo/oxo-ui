@@ -1,7 +1,7 @@
 import ConfigProvider from "./ConfigProvider.vue";
-import {withInstall }from '@toy-element/utils'
+import {withInstall }from '@oxo-ui/utils'
 
-export const ErConfigProvider = withInstall(ConfigProvider)
+export const OxoConfigProvider = withInstall(ConfigProvider)
 
 export * from './types'
 export * from './hooks'

@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import type { OverlayProps, OverlayEmits } from "./types";
 
-defineOptions({ name: "ErOverlay" });
+defineOptions({ name: "OxOverlay" });
 withDefaults(defineProps<OverlayProps>(), {
   mask: true,
 });
@@ -15,7 +15,7 @@ function onMaskClick(e: MouseEvent) {
 <template>
   <div
     v-if="mask"
-    class="er-overlay"
+    class="ox-overlay"
     :class="overlayClass"
     :style="{ zIndex: zIndex }"
     @click="onMaskClick"
@@ -39,7 +39,7 @@ function onMaskClick(e: MouseEvent) {
 </template>
 
 <style scoped>
-.er-overlay {
+.ox-overlay {
   position: fixed;
   top: 0;
   left: 0;

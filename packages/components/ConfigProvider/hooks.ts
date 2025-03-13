@@ -13,10 +13,10 @@ import {
   configProviderContextKey,
 } from "./constants";
 import { createI18n, i18nSymbol } from "vue3-i18n";
-import type { TranslatePair } from "@toy-element/locale";
-import English from "@toy-element/locale/lang/en";
+import type { TranslatePair } from "@oxo-ui/locale";
+import English from "@oxo-ui/locale/lang/en";
 import { merge } from "lodash-es";
-import { debugWarn } from "@toy-element/utils";
+import { debugWarn } from "@oxo-ui/utils";
 
 const globalConfig = ref<ConfigProviderContext>();
 

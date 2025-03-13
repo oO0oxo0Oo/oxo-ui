@@ -1,18 +1,18 @@
 <script setup lang="ts">
 import type { MessageBoxProps, MessageBoxAction } from "./types";
 import type { InputInstance } from "../Input/types";
-import { useZIndex, useId } from "@toy-element/hooks";
-import { typeIconMap } from "@toy-element/utils";
+import { useZIndex, useId } from "@oxo-ui/hooks";
+import { typeIconMap } from "@oxo-ui/utils";
 import { reactive, computed, ref, watch, nextTick, type Ref } from "vue";
 
-import ErOverlay from "../Overlay/Overlay.vue";
-import ErIcon from "../Icon/Icon.vue";
-import ErButton from "../Button/Button.vue";
-import ErInput from "../Input/Input.vue";
+import OxOverlay from "../Overlay/Overlay.vue";
+import OxIcon from "../Icon/Icon.vue";
+import OxButton from "../Button/Button.vue";
+import OxInput from "../Input/Input.vue";
 import { isFunction, isNil } from "lodash-es";
 
 defineOptions({
-  name: "ErMessageBox",
+  name: "OxMessageBox",
   inheritAttrs: false,
 });
 
@@ -84,16 +84,16 @@ function handleClose() {
 
 <template>
   <transition name="fade-in-linear" @after-leave="destroy">
-    <er-overlay v-show="(visible as Ref).value" :z-index="state.zIndex" mask>
+    <ox-overlay v-show="(visible as Ref).value" :z-index="state.zIndex" mask>
       <div
         role="dialog"
-        class="er-overlay-message-box"
+        class="ox-overlay-message-box"
         @click="handleWrapperClick"
       >
         <div
           ref="rootRef"
           :class="[
-            'er-message-box',
+            'ox-message-box',
             {
               'is-center': state.center,
             },
@@ -103,14 +103,14 @@ function handleClose() {
           <div
             v-if="!isNil(state.title)"
             ref="headerRef"
-            class="er-message-box__header"
+            class="ox-message-box__header"
             :class="{ 'show-close': state.showClose }"
           >
-            <div class="er-message-box__title">
-              <er-icon
+            <div class="ox-message-box__title">
+              <ox-icon
                 v-if="iconComponent && state.center"
                 :class="{
-                  [`er-icon-${state.type}`]: state.type,
+                  [`ox-icon-${state.type}`]: state.type,
                 }"
                 :icon="iconComponent"
               />
@@ -118,21 +118,21 @@ function handleClose() {
             </div>
             <button
               v-if="showClose"
-              class="er-message-box__header-btn"
+              class="ox-message-box__header-btn"
               @click.stop="handleClose"
             >
-              <er-icon icon="xmark" />
+              <ox-icon icon="xmark" />
             </button>
           </div>
-          <div class="er-message-box__content">
-            <er-icon
+          <div class="ox-message-box__content">
+            <ox-icon
               v-if="iconComponent && !state.center && hasMessage"
               :class="{
-                [`er-icon-${state.type}`]: state.type,
+                [`ox-icon-${state.type}`]: state.type,
               }"
               :icon="iconComponent"
             />
-            <div v-if="hasMessage" class="er-message-box__message">
+            <div v-if="hasMessage" class="ox-message-box__message">
               <slot>
                 <component
                   :is="state.showInput ? 'label' : 'p'"
@@ -143,8 +143,8 @@ function handleClose() {
               </slot>
             </div>
           </div>
-          <div v-show="state.showInput" class="er-message-box__input">
-            <er-input
+          <div v-show="state.showInput" class="ox-message-box__input">
+            <ox-input
               v-model="state.inputValue"
               ref="inputRef"
               :placeholder="state.inputPlaceholder"
@@ -152,31 +152,31 @@ function handleClose() {
               @keyup.enter="handleInputEnter"
             />
           </div>
-          <div class="er-message-box__footer">
-            <er-button
+          <div class="ox-message-box__footer">
+            <ox-button
               v-if="state.showCancelButton"
-              class="er-message-box__footer-btn er-message-box__cancel-btn"
+              class="ox-message-box__footer-btn ox-message-box__cancel-btn"
               :type="state.cancelButtonType"
               :round="state.roundButton"
               :loading="state.cancelButtonLoading"
               @click="handleAction('cancel')"
               @keydown.prevent.enter="handleAction('cancel')"
-              >{{ state.cancelButtonText }}</er-button
+              >{{ state.cancelButtonText }}</ox-button
             >
-            <er-button
+            <ox-button
               v-show="state.showConfirmButton"
-              class="er-message-box__footer-btn er-message-box__confirm-btn"
+              class="ox-message-box__footer-btn ox-message-box__confirm-btn"
               :type="state.confirmButtonType ?? 'primary'"
               :round="state.roundButton"
               :loading="state.confirmButtonLoading"
               @click="handleAction('confirm')"
               @keydown.prevent.enter="handleAction('confirm')"
-              >{{ state.confirmButtonText }}</er-button
+              >{{ state.confirmButtonText }}</ox-button
             >
           </div>
         </div>
       </div>
-    </er-overlay>
+    </ox-overlay>
   </transition>
 </template>
 

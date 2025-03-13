@@ -1,14 +1,14 @@
 import type { StoryObj, Meta } from "@storybook/vue3";
 
 import { fn } from "@storybook/test";
-import { ErTooltip } from "toy-element";
-import 'toy-element/dist/theme/Tooltip.css'
+import { OxTooltip } from "oxo-ui";
+import 'oxo-ui/dist/theme/Tooltip.css'
 
-type Story = StoryObj<typeof ErTooltip>;
+type Story = StoryObj<typeof OxTooltip>;
 
-const meta: Meta<typeof ErTooltip> = {
+const meta: Meta<typeof OxTooltip> = {
   title: "Example/Tooltip",
-  component: ErTooltip,
+  component: OxTooltip,
   tags: ["autodocs"],
   argTypes: {
     trigger: {
@@ -36,16 +36,16 @@ export const Default: Story = {
     trigger: "hover",
   },
   render: (args) => ({
-    components: { ErTooltip },
+    components: { OxTooltip },
     setup() {
       return {
         args,
       };
     },
     template: `
-      <ErTooltip v-bind="args">
+      <OxTooltip v-bind="args">
           <div style="height:30px;width:200px;background:red;padding:auto">trigger</div>
-      </ErTooltip>
+      </OxTooltip>
     `,
   }),
 };

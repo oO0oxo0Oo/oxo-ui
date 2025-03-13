@@ -3,12 +3,12 @@ import type { NotificationProps, NotificationCompInstance } from "./types";
 import { computed, onMounted, ref } from "vue";
 import { getLastBottomOffset } from "./methods";
 import { delay, bind } from "lodash-es";
-import { useOffset } from "@toy-element/hooks";
-import { addUnit } from "@toy-element/utils";
-import { typeIconMap, RenderVnode } from "@toy-element/utils";
-import ErIcon from "../Icon/Icon.vue";
+import { useOffset } from "@oxo-ui/hooks";
+import { addUnit } from "@oxo-ui/utils";
+import { typeIconMap, RenderVnode } from "@oxo-ui/utils";
+import OxIcon from "../Icon/Icon.vue";
 
-defineOptions({ name: "ErNotification" });
+defineOptions({ name: "OxNotification" });
 
 const props = withDefaults(defineProps<NotificationProps>(), {
   type: "info",
@@ -72,15 +72,15 @@ defineExpose<NotificationCompInstance>({
 
 <template>
   <transition
-    :name="`er-notification-${transitionName}`"
+    :name="`ox-notification-${transitionName}`"
     @after-leave="!visible && onDestory()"
     @enter="boxHeight = notifyRef!.getBoundingClientRect().height"
   >
     <div
       ref="notifyRef"
-      class="er-notification"
+      class="ox-notification"
       :class="{
-        [`er-notification--${type}`]: type,
+        [`ox-notification--${type}`]: type,
         [horizontalClass]: true,
         'show-close': showClose,
       }"
@@ -91,18 +91,18 @@ defineExpose<NotificationCompInstance>({
       @mouseenter="clearTimer"
       @mouseleave="startTimmer"
     >
-      <er-icon v-if="iconName" :icon="iconName" class="er-notification__icon" />
+      <ox-icon v-if="iconName" :icon="iconName" class="ox-notification__icon" />
 
-      <div class="er-notification__text">
-        <div class="er-notification__title">{{ title }}</div>
-        <div class="er-notification__content">
+      <div class="ox-notification__text">
+        <div class="ox-notification__title">{{ title }}</div>
+        <div class="ox-notification__content">
           <slot>
             <render-vnode v-if="message" :vNode="message" />
           </slot>
         </div>
       </div>
-      <div class="er-notification__close" v-if="showClose">
-        <er-icon icon="xmark" @click.stop="close" />
+      <div class="ox-notification__close" v-if="showClose">
+        <ox-icon icon="xmark" @click.stop="close" />
       </div>
     </div>
   </transition>

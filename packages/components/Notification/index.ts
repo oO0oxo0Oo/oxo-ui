@@ -1,6 +1,6 @@
 import Notification from "./methods";
-import {withInstallFunction} from '@toy-element/utils'
+import {withInstallFunction} from '@oxo-ui/utils'
 
-export const ErNotification = withInstallFunction(Notification, '$notify')
+export const OxNotification = withInstallFunction(Notification, '$notify')
 
 export * from './types'

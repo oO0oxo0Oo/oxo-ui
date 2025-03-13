@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { inject, computed } from "vue";
 import { DROPDOWN_CTX_KEY } from "./constants";
-import { useId } from "@toy-element/hooks";
+import { useId } from "@oxo-ui/hooks";
 
 import type { DropdownItemProps } from "./types";
 
 defineOptions({
-  name: "ErDropdownItem",
+  name: "OxDropdownItem",
 });
 
 const props = withDefaults(defineProps<DropdownItemProps>(), {
@@ -29,8 +29,8 @@ function handleClick() {
   <li
     :id="`dropdown-item-${command ?? useId().value}`"
     :class="{
-      'er-dropdown__item': true,
-      ['er-dropdown__item--' + size]: size,
+      'ox-dropdown__item': true,
+      ['ox-dropdown__item--' + size]: size,
       'is-disabled': disabled,
       'is-divided': divided,
     }"

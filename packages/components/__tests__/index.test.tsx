@@ -1,22 +1,22 @@
 import type { Plugin } from "vue";
 import { describe, it, expect } from "vitest";
 import {
-  ErAlert,
-  ErButton,
-  ErButtonGroup,
-  ErCollapse,
-  ErCollapseItem,
-  ErIcon,
+  OxAlert,
+  OxButton,
+  OxButtonGroup,
+  OxCollapse,
+  OxCollapseItem,
+  OxIcon,
 } from "..";
 import { get, map } from "lodash-es";
 
 const comps = [
-  ErAlert,
-  ErButton,
-  ErButtonGroup,
-  ErCollapse,
-  ErCollapseItem,
-  ErIcon,
+  OxAlert,
+  OxButton,
+  OxButtonGroup,
+  OxCollapse,
+  OxCollapseItem,
+  OxIcon,
 ] as Plugin[];
 
 describe("components/index", () => {

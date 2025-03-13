@@ -1,25 +1,25 @@
-.er-loading {
-  --er-loading-icon-color: var(--er-color-primary);
-  --er-loading-mask-margin: 0;
-  --er-loading-mask-size: 100%;
-  --er-loading-icon-size: 42px;
-  --er-loading-font-size: 14px;
-  --er-loading-z-index: 20000;
+.ox-loading {
+  --ox-loading-icon-color: var(--ox-color-primary);
+  --ox-loading-mask-margin: 0;
+  --ox-loading-mask-size: 100%;
+  --ox-loading-icon-size: 42px;
+  --ox-loading-font-size: 14px;
+  --ox-loading-z-index: 20000;
 }
-.er-loading {
+.ox-loading {
   opacity: 1;
-  transition: opacity var(--er-transition-duration);
-  &.er-loading__mask {
+  transition: opacity var(--ox-transition-duration);
+  &.ox-loading__mask {
     position: absolute;
-    margin: var(--er-loading-mask-margin);
-    top: var(--er-loading-mask-margin);
-    right: var(--er-loading-mask-margin);
-    bottom: var(--er-loading-mask-margin);
-    left: var(--er-loading-mask-margin);
-    height: var(--er-loading-mask-size);
-    width: var(--er-loading-mask-size);
-    z-index: var(--er-loading-z-index);
-    background: var(--er-loading-bg-color);
+    margin: var(--ox-loading-mask-margin);
+    top: var(--ox-loading-mask-margin);
+    right: var(--ox-loading-mask-margin);
+    bottom: var(--ox-loading-mask-margin);
+    left: var(--ox-loading-mask-margin);
+    height: var(--ox-loading-mask-size);
+    width: var(--ox-loading-mask-size);
+    z-index: var(--ox-loading-z-index);
+    background: var(--ox-loading-bg-color);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,15 +27,15 @@
       position: fixed;
     }
   }
-  .er-loading__spinner {
-    color: var(--er-loading-icon-color);
+  .ox-loading__spinner {
+    color: var(--ox-loading-icon-color);
     text-align: center;
-    .er-loading-text {
+    .ox-loading-text {
       margin: 3px 0;
-      font-size: var(--er-loading-font-size);
+      font-size: var(--ox-loading-font-size);
     }
     i {
-      font-size: var(--er-loading-icon-size);
+      font-size: var(--ox-loading-icon-size);
     }
   }
 }
@@ -44,9 +44,9 @@
     opacity: 0;
 } */
 
-.er-loading-parent--relative {
+.ox-loading-parent--relative {
   position: relative !important;
 }
-.er-loading-parent--hiden {
+.ox-loading-parent--hiden {
   overflow: hidden !important;
 }

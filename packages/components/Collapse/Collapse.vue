@@ -1,11 +1,11 @@
 <script setup lang="ts">
 import { ref, provide, watch, watchEffect } from "vue";
 import type { CollapseProps, CollapseEmits,CollapseItemName} from "./types";
-import { debugWarn } from "@toy-element/utils";
+import { debugWarn } from "@oxo-ui/utils";
 import { COLLAPSE_CTX_KEY } from "./contants";
 import { each } from "lodash-es";
 
-const COMPONENT_NAME="ErCollapse" as const;
+const COMPONENT_NAME="OxCollapse" as const;
 
 defineOptions({
   name: COMPONENT_NAME,
@@ -58,7 +58,7 @@ provide(COLLAPSE_CTX_KEY, {
 </script>
 
 <template>
-  <div class="er-collapse">
+  <div class="ox-collapse">
     <slot></slot>
   </div>
 </template>

@@ -11,7 +11,7 @@ import type {
 } from "./types";
 
 import { notificationTypes, notificationPosition } from "./types";
-import { useId, useZIndex } from "@toy-element/hooks";
+import { useId, useZIndex } from "@oxo-ui/hooks";
 import { isString, findIndex, set, each, get } from "lodash-es";
 import NotificationConstructor from "./Notification.vue";
 

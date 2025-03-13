@@ -1,14 +1,14 @@
 <template>
   <div>
-    <er-button type="primary" loading>Loading</er-button>
-    <er-button type="primary" loading-icon="circle-notch" loading
-      >Loading</er-button
+    <ox-button type="primary" loading>Loading</ox-button>
+    <ox-button type="primary" loading-icon="circle-notch" loading
+      >Loading</ox-button
     >
-    <er-button type="primary" loading>
+    <ox-button type="primary" loading>
       <template #loading>
-        <er-icon style="margin-right: 6px" icon="star" spin />
+        <ox-icon style="margin-right: 6px" icon="star" spin />
       </template>
       Loading
-    </er-button>
+    </ox-button>
   </div>
 </template>
