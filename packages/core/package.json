@@ -1,5 +1,5 @@
 {
-  "name": "oxo-ui",
+  "name": "@oxo-ui/oxo-ui",
   "version": "1.0.1",
   "description": "components library by Vue3 + TS",
   "type": "module",
@@ -33,7 +33,7 @@
     "release": "release-it"
   },
   "keywords": [],
-  "author": "",
+  "author": "o0oxo0o",
   "license": "ISC",
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",

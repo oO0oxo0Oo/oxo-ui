@@ -85,7 +85,7 @@ export default defineConfig({
       // 入口文件路径
       entry: resolve(__dirname, '../index.ts'),
       // 库名称
-      name: 'ToyElement',
+      name: 'OxoUI',
       // 输出文件名
       fileName: 'index',
       // 支持的格式
