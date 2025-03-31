@@ -15,7 +15,10 @@
     "build": "run-s build-hooks build-comp",
     "build-comp": "cross-env NODE_ENV=production pnpm --filter oxo-ui build",
     "build-hooks": "cross-env NODE_ENV=production pnpm --filter @oxo-ui/hooks build",
-    "build:dev": "cross-env NODE_ENV=development pnpm --filter oxo-ui build:watch"
+    "build:dev": "cross-env NODE_ENV=development pnpm --filter oxo-ui build:watch",
+    "changed": "dotenv lerna version --conventional-commits --create-release github --yes",
+    "changed:patch": "dotenv lerna version patch --conventional-commits --create-release github --yes",
+    "changed:major": "dotenv lerna version major --conventional-commits --create-release github --yes"
   },
   "keywords": [],
   "author": "",
@@ -24,6 +27,9 @@
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
     "@fortawesome/vue-fontawesome": "^3.0.6",
+    "@lerna-lite/cli": "^3.8.0",
+    "@lerna-lite/publish": "^3.8.0",
+    "@lerna-lite/version": "^3.8.0",
     "@popperjs/core": "^2.11.8",
     "@types/lodash-es": "^4.17.12",
     "@types/node": "^20.11.20",
